@@ -5,12 +5,22 @@ See assignment-01.pdf for details.
 # no imports needed.
 
 def foo(x):
-    ### TODO
-    pass
+    if (x <= 1):
+      return x
+    else: 
+      return foo(x-1) + foo(x-2)
 
 def longest_run(mylist, key):
-    ### TODO
-    pass
+    longest_seq = 0
+    current_seq = 0
+    for i in mylist:
+      if (i != key):
+        current_seq = 0
+      else:
+        current_seq += 1
+      if (longest_seq < current_seq):
+        longest_seq = current_seq
+    return longest_seq
 
 
 class Result:

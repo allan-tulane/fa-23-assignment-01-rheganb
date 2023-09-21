@@ -2,7 +2,7 @@
 
 # CMPS 2200 Assignment 1
 
-**Name:**_________________________
+**Name: Rhegan Barrett** 
 
 
 In this assignment, you will learn more about asymptotic notation, parallelism, functional languages, and algorithmic cost models. As in the recitation, some of your answer will go here and some will go in `main.py`. You are welcome to edit this `assignment-01.md` file directly, or print and fill in by hand. If you do the latter, please scan to a file `assignment-01.pdf` and push to your github repository. 
@@ -12,35 +12,35 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
-.  
+.  Yes, because as n approaches infinity, the limit also goes to a constant so it could work for any bound (big O, theta, big omega).
 .  
 .  
 .  
 . 
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
-.  
+.  No. As n approaches infinity, the limit goes to infinity. Therefore it's omega(2^n). 
 .  
 .  
 .  
 .  
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
-.  
+.  No. As n approaches infinity, the limit goes to infinity, so it's omega(log^2 n).
 .  
 .  
 .  
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
-.  
+.  Yes. Like I said above, as n approaches infinity, the limit goes to infinity so this is the correct asymptotic analysis.
 .  
 .  
 .  
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
-.  
+.  No. As n approaches infinity, the limit goes to infinity so it's omega(log^3 n).
 .  
 .  
 .  
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
-.  
+.  Yes. As n approaches infinity, the limit goes to infinity so it's the asympototic lower bound.
 
 
 2. **SPARC to Python** (12 pts)
@@ -62,7 +62,7 @@ $$
 
   - 2b. (6 pts) What does this function do, in your own words?  
 
-.  
+.  This is a recursive implementation of the Fibonnaci sequence. The base case returns either 0 or 1 because those are the first two numbers of the sequence and you can only get 0 or 1 when adding those two together. Th else branch then recursively calls the foo function so we can calculate the sum of adding the two previous terms together.
 .  
 .  
 .  
@@ -92,7 +92,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
   - 3b. (4 pts) What is the Work and Span of this implementation?  
 
-.  
+.  Work and span are both O(n).
 .  
 .  
 .  
@@ -107,7 +107,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
   - 3d. (4 pts) What is the Work and Span of this sequential algorithm?  
 .  
-.  
+. The work is O(n) while the span is O(log n). 
 .  
 .  
 .  
@@ -121,7 +121,7 @@ E.g., `longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3`
 
   - 3e. (4 pts) Assume that we parallelize in a similar way we did with `sum_list_recursive`. That is, each recursive call spawns a new thread. What is the Work and Span of this algorithm?  
 
-.  
+.  The work is O(n log n) and the span is O(log^2 n)
 .  
 .  
 .  
